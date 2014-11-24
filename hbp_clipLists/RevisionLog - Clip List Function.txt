@@ -1,0 +1,5 @@
+Revision Log - Clip List function
+
+To Do:
+
+-	For plots with plotSize = 20, want to assign subplotID = 31 instead of "NA"
