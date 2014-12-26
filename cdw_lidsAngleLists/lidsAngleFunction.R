@@ -23,7 +23,7 @@ setwd("../")
 
 # Create a dataframe to hold function output, and insert list of desired plotIDs
 lids.df = data.frame(matrix(data=NA, nrow=length(plotID), ncol=4))
-cNames = c("plotID","lidsAngle1","lidsAngle2","lidsAngle3")
+cNames = c("plotID","lidsAzimuth1","lidsAzimuth2","lidsAzimuth3")
 colnames(lids.df) = cNames
 lids.df$plotID = as.character(plotID)
 
@@ -45,7 +45,7 @@ for (i in 1:nrow(lids.df)){
 }
 
 
-#  Calculate lidsAngle2 and lidsAngle3 from lidsAngle1
+#  Calculate lidsAzimuth2 and lidsAzimuth3 from lidsAzimuth1
 angle2 = lids.df$lidsAngle1 + 120
 angle2[angle2 >= 360] = angle2[angle2 >= 360] - 360
 angle3 = lids.df$lidsAngle1 + 240
