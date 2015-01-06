@@ -1,0 +1,63 @@
+---
+title: "site characterization data check"
+output: html_document
+---
+
+Read in data
+```{r}
+
+pathtocsvs<-'Z:/' #test data here for mapping/tagging, should only need vst_perindividual_Dxx csvs
+
+#set this to the prefix for the sheets in your module
+myPrefix<-'vst'
+
+#inspect files
+Filelist<-list.files(pathtocsvs) #list all the files
+Filelist<-Filelist[grep (myPrefix,Filelist)] #subset to just the ones in your module
+Filelist<-Filelist[grep ('.csv',Filelist)] #subset to just the uploaded csvs
+```
+
+Assess completeness
+```{r}
+#list unique plotIDs by site
+
+#compare list to list of tower plots per site 
+#Y:\Arcadis\Spatial_Data_2014\D01\HARV\HARV_TowerPlots.csv
+#Y:\Arcadis\Spatial_Data_2014\D02\SCBI\SCBI_TowerPlots.csv
+#Y:\Arcadis\Spatial_Data_2014\D03\JERC\JERC_TowerPlots.csv
+#Y:\Arcadis\Spatial_Data_2014\D03\OSBS\OSBS_TowerPlots.csv
+#Y:\Arcadis\Spatial_Data_2014\D08\TALL\TALL_TowerPlots.csv
+
+#list missing plots
+#list extra plots
+
+```
+
+
+Check for duplicate entries
+```{r}
+#by tagID/site
+
+```
+
+List unique species
+```{r}
+#by site
+```
+
+List unique growthForms
+```{r}
+#by site
+```
+
+check that all pointIDs are valid and that relative positions are within plot boundaries
+```{r}
+#ATBD section 5.4.5
+
+#RD[14] = N:\common\TOS\ATBDs\Lookups\L_vst_pointID_azimuthValidation.csv
+```
+
+summary stats
+```{r}
+#min/max/mean count of tagID/plot by site
+```
