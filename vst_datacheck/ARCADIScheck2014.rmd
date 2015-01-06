@@ -17,6 +17,8 @@ Filelist<-Filelist[grep (myPrefix,Filelist)] #subset to just the ones in your mo
 Filelist<-Filelist[grep ('.csv',Filelist)] #subset to just the uploaded csvs
 ```
 
+**The following can be wrapped into a single function if you're feeling fancy**
+
 Assess completeness
 ```{r}
 #list unique plotIDs by site
